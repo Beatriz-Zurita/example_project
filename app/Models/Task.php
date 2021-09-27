@@ -12,7 +12,7 @@ class Task extends Model
 
     public function categories()
     {
-        return $this->belongsToMany('App\Category', 'categories_tasks', 'task_id', 'category_id');
+        return $this->belongsToMany('App\Models\Category', 'categories_tasks', 'task_id', 'category_id');
     }
     
 }

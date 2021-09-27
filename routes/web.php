@@ -14,3 +14,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('tasks', 'App\Http\Controllers\TaskController@index');
+Route::post('add', 'App\Http\Controllers\TaskController@add')->name('tasks.add');
+Route::post('delete', 'App\Http\Controllers\TaskController@delete')->name('tasks.delete');
