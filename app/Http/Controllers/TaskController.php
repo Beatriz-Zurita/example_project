@@ -32,10 +32,11 @@ class TaskController extends Controller
         $task->save();
 
         $task->categories()->attach($request->categories);
-        $category = Category::find($request->categories);
+
+        $categories = Category::findMany($request->categories);
 
         $data['task'] = $task;
-        $data['category'] = $category;
+        $data['categories'] = $categories;
 
         return $data;
     } 
